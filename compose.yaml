@@ -4,7 +4,7 @@ db:
   environment:
     MYSQL_ROOT_PASSWORD=secret
     MYSQL_DATABASE=app
-    port:
+    ports:
     - 3307:3306
     volumes:
     - ./db:/var/lib/mysql
