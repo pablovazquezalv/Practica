@@ -1,0 +1,20 @@
+service:
+db:
+image:mysql:8.0.22
+  environment:
+    MYSQL_ROOT_PASSWORD=secret
+    MYSQL_DATABASE=app
+    port:
+    3307:3306
+    volumes:
+    - ./db:/var/lib/mysql
+
+    db2:
+image:mysql:8.0.22
+  environment:
+    MYSQL_ROOT_PASSWORD=secret
+    MYSQL_DATABASE=app
+    port:
+    3309:3306
+    volumes:
+    - ./db_produccion:/var/lib/mysql
